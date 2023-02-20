@@ -1,6 +1,7 @@
 package com.example.yiapp.login;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -40,9 +41,12 @@ public class LoginActivity extends AppCompatActivity {
                     public void onResponse(Call<LoginResponse> call, Response<LoginResponse> response) {
                         LoginResponse loginResponse = response.body();
                         token=loginResponse.getToken();
+                        SharedPreferences sp=getSharedPreferences("credentials",MODE_PRIVATE);
+                        SharedPreferences.Editor  editor=sp.edit();
+                        editor.putString("token",token);
+                        editor.apply();
                         if (response.isSuccessful()) {
                             Intent intent=new Intent(LoginActivity.this,MainActivity.class);
-                            intent.putExtra("token",token);
                             startActivity(intent);
                         }
                     }

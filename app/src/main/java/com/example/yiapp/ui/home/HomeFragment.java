@@ -80,7 +80,7 @@ public class HomeFragment extends Fragment {
         return view;
     }
 
-    public void setUpRecyclerView(View view)
+    private void setUpRecyclerView(View view)
     {   recview = view.findViewById(R.id.verticals_recview);
         recview.setLayoutManager(new LinearLayoutManager(view.getContext(), LinearLayoutManager.VERTICAL, false));
         recview.setHasFixedSize(true);
