@@ -5,21 +5,30 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.yiapp.MainActivity;
+import com.example.yiapp.R;
 import com.example.yiapp.courses.CourseActivity;
 import com.example.yiapp.databinding.ActivityLoginBinding;
 import com.example.yiapp.ui.home.network.ApiInterface;
 import com.example.yiapp.ui.home.network.RetrofitInstance;
+import com.google.android.material.textfield.TextInputLayout;
 
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
 public class LoginActivity extends AppCompatActivity {
+
+    //edited
+    TextInputLayout emaillayout;
+    TextInputLayout passwordlayout;
+    Button button;
+    float v = 0;
 
     public static String token;
     ActivityLoginBinding binding;
@@ -28,6 +37,25 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityLoginBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
+        //Animation Start
+        emaillayout = (TextInputLayout) findViewById(R.id.email_InputLayout);
+        passwordlayout = (TextInputLayout) findViewById(R.id.Password_InputLayout);
+        button = (Button) findViewById(R.id.login_button);
+
+        emaillayout.setTranslationX(800);
+        passwordlayout.setTranslationX(800);
+        button.setTranslationX(800);
+
+        emaillayout.setAlpha(v);
+        passwordlayout.setAlpha(v);
+        button.setAlpha(v);
+
+        emaillayout.animate().translationX(0).alpha(1).setDuration(800).setStartDelay(300).start();
+        passwordlayout.animate().translationX(0).alpha(1).setDuration(800).setStartDelay(500).start();
+        button.animate().translationX(0).alpha(1).setDuration(800).setStartDelay(500).start();
+
+        //Animation End
 
         binding.loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
