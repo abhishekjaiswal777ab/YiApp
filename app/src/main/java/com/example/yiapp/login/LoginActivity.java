@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -16,6 +17,8 @@ import com.example.yiapp.courses.CourseActivity;
 import com.example.yiapp.databinding.ActivityLoginBinding;
 import com.example.yiapp.ui.home.network.ApiInterface;
 import com.example.yiapp.ui.home.network.RetrofitInstance;
+import com.github.ybq.android.spinkit.sprite.Sprite;
+import com.github.ybq.android.spinkit.style.WanderingCubes;
 import com.google.android.material.textfield.TextInputLayout;
 
 import retrofit2.Call;
@@ -37,6 +40,12 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityLoginBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
+        //login progress bar
+        ProgressBar progressBar = (ProgressBar)findViewById(R.id.spin_kit);
+        Sprite doubleBounce = new WanderingCubes();
+        progressBar.setIndeterminateDrawable(doubleBounce);
+
 
         //Animation Start
         emaillayout = (TextInputLayout) findViewById(R.id.email_InputLayout);
@@ -60,6 +69,7 @@ public class LoginActivity extends AppCompatActivity {
         binding.loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                progressBar.setVisibility(View.VISIBLE);
                 Toast.makeText(LoginActivity.this,"just clicked",Toast.LENGTH_SHORT).show();
                 String email=binding.usernameLogin.getText().toString();
                 String password=binding.passwordLogin.getText().toString();
