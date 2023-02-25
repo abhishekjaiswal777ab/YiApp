@@ -207,6 +207,25 @@
             app:layout_constraintTop_toBottomOf="@+id/Password_InputLayout"
             app:layout_constraintWidth_percent="0.5"/>
 
+        <!--    animation for progress bar-->
+        <com.github.ybq.android.spinkit.SpinKitView
+            android:id="@+id/spin_kit"
+            android:visibility="gone"
+            style="@style/SpinKitView.Large.Circle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            app:SpinKit_Color="#4C2AF4"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.778" />
+
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
