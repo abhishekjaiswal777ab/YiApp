@@ -13,4 +13,6 @@
     <color name="hintcolor">#808080</color>
     <color name="color">#00008b</color>
 
+    <color name="shimmer">#BFBDBD</color>
+
 </resources>

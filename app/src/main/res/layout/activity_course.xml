@@ -4,103 +4,152 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".courses.CourseActivity"
-    android:orientation="vertical">
 
+    android:orientation="vertical"
+    tools:context=".courses.CourseActivity">
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardView"
-        android:layout_width="389dp"
-        android:layout_height="140dp"
-        android:layout_marginTop="4dp"
-        android:background="@drawable/my_gradient"
-        android:elevation="8dp"
-
-        app:cardUseCompatPadding="true"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginRight="8dp"
-            android:layout_marginBottom="8dp"
-            android:background="@drawable/my_gradient"
-            android:gravity="left"
-            android:orientation="vertical">
-
-
-            <TextView
-                android:id="@+id/vertical_name"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="4dp"
-                android:fontFamily="@font/adamina_regular"
-                android:paddingStart="10dp"
-                android:paddingLeft="10dp"
-                android:paddingTop="10dp"
-                android:paddingEnd="10dp"
-                android:text="TextView"
-                android:textColor="#000000"
-                android:textSize="30sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/vertical_desc"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="sans-serif-thin"
-                android:paddingLeft="8dp"
-                android:paddingBottom="3dp"
-                android:text="TextView"
-                android:textColor="#272727"
-                android:textSize="16sp"
-                android:textStyle="bold" />
-
-        </LinearLayout>
-
-    </androidx.cardview.widget.CardView>
 
     <View
-        android:id="@+id/view"
+        android:id="@+id/View"
         android:layout_width="413dp"
-        android:layout_height="2dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="28dp"
-        android:background="@android:color/darker_gray"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardView" />
+        android:layout_height="104dp"
+        android:background="#07274e"
 
-    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
-        android:id="@+id/swipeforcourses"
-        android:layout_width="410dp"
-        android:layout_height="654dp"
-        android:layout_marginTop="12dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintTop_toTopOf="parent">
 
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recview_course"
+    </View>
+
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/vertical_name"
+            android:layout_width="wrap_content"
+            android:layout_height="58dp"
+            android:layout_alignParentStart="true"
+
+
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="17dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="17dp"
+            android:autoSizeMaxTextSize="24sp"
+            android:autoSizeMinTextSize="20sp"
+            android:autoSizeTextType="uniform"
+            android:fontFamily="@font/source_sans_pro_bold"
+            android:gravity="center_vertical"
+            android:text="climate change"
+            android:textAllCaps="true"
+            android:textColor="#E4E1E1"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <View
+            android:id="@+id/view"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/vertical_desc">
+            android:layout_height="66dp"
+            android:layout_below="@+id/vertical_name"
 
 
-        </androidx.recyclerview.widget.RecyclerView>
+            android:layout_marginTop="42dp"
+            android:background="@drawable/wave" />
+
+        <TextView
+            android:id="@+id/vertical_desc"
+            android:layout_width="381dp"
+            android:layout_height="60dp"
+
+            android:layout_below="@id/vertical_name"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/rubik_medium"
+            android:gravity="top|left"
+            android:text="TextView hello anhbdhwdhewgdhewgdhedhewgdegwycgeycgyuwgudgywegudgyewgycgewygcegwygceuwgcudhjewd"
+            android:textColor="#E4DCDC"
+            android:textSize="15sp" />
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/course_shimmer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible">
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="150dp"
+
+                android:orientation="vertical">
+
+                <include layout="@layout/shimmer_layout">
+
+                </include>
+
+                <include layout="@layout/shimmer_layout">
+
+                </include>
+
+                <include layout="@layout/shimmer_layout">
+
+                </include>
+
+                <include layout="@layout/shimmer_layout">
+
+                </include>
+
+            </LinearLayout>
+
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipeforcourses"
+            android:layout_width="384dp"
+            android:layout_height="572dp"
+
+            android:layout_below="@+id/vertical_desc"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="9dp"
+            android:layout_marginBottom="16dp">
 
 
-    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recview_course"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="240dp"
+                android:layout_marginRight="5dp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/vertical_desc">
+
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    </RelativeLayout>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
