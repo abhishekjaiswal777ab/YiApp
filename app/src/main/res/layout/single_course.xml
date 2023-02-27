@@ -2,11 +2,6 @@
 <layout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-    <data>
-        <variable
-            name="courseObject"
-            type="com.example.yiapp.courses.modals.ModelCourse" />
-    </data>
 
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
@@ -26,7 +21,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
-                android:text="@{courseObject.name}"
+                android:text="course_name"
                 android:textColor="@color/black"
                 android:textSize="25dp"
                 android:textStyle="bold" />
@@ -38,7 +33,7 @@
                 android:layout_below="@+id/t1"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
-                android:text="@{courseObject.desc}"
+                android:text="desc"
                 android:textColor="@color/grey_font"
                 android:textSize="20dp"
                 android:textStyle="bold" />
