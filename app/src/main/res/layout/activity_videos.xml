@@ -6,4 +6,32 @@
     android:layout_height="match_parent"
     tools:context=".courses.VideosActivity">
 
+
+    <TextView
+        android:id="@+id/course_heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/course_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="@+id/course_heading"
+        app:layout_constraintStart_toStartOf="@+id/course_heading"
+        app:layout_constraintTop_toBottomOf="@+id/course_heading" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recview_video"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/course_description" />
 </androidx.constraintlayout.widget.ConstraintLayout>

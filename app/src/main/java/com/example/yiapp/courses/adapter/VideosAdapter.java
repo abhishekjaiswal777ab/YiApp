@@ -10,14 +10,15 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.yiapp.courses.modals.ModelAllUnits;
 import com.example.yiapp.databinding.SingleVideoBinding;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class VideosAdapter extends RecyclerView.Adapter<VideosAdapter.myHolder> {
 
-    List<ModelAllUnits> list;
+    ArrayList<ModelAllUnits> list;
     Context context;
 
-    public VideosAdapter(List<ModelAllUnits> list, Context context) {
+    public VideosAdapter(ArrayList<ModelAllUnits> list, Context context) {
         this.list = list;
         this.context = context;
     }

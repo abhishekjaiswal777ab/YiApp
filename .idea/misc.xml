@@ -4,23 +4,28 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/abhis/AndroidStudioProjects/YiApp/app/src/main/res/drawable/background_toolbar.xml" value="0.102" />
+        <entry key="..\:/Users/abhis/AndroidStudioProjects/YiApp/app/src/main/res/drawable/edit_text_bg.xml" value="0.1" />
         <entry key="..\:/Users/abhis/AndroidStudioProjects/YiApp/app/src/main/res/drawable/ic_menu_camera.xml" value="0.102" />
         <entry key="..\:/Users/abhis/AndroidStudioProjects/YiApp/app/src/main/res/drawable/ic_menu_gallery.xml" value="0.102" />
         <entry key="..\:/Users/abhis/AndroidStudioProjects/YiApp/app/src/main/res/drawable/ic_menu_slideshow.xml" value="0.102" />
+        <entry key="..\:/Users/abhis/AndroidStudioProjects/YiApp/app/src/main/res/drawable/icl_curve.xml" value="0.1" />
+        <entry key="..\:/Users/abhis/AndroidStudioProjects/YiApp/app/src/main/res/drawable/login_btn_oval.xml" value="0.1" />
         <entry key="..\:/Users/abhis/AndroidStudioProjects/YiApp/app/src/main/res/drawable/oval.xml" value="0.163" />
         <entry key="..\:/Users/abhis/AndroidStudioProjects/YiApp/app/src/main/res/drawable/side_nav_bar.xml" value="0.102" />
+        <entry key="..\:/Users/abhis/AndroidStudioProjects/YiApp/app/src/main/res/font/adamina.xml" value="0.17592592592592593" />
+        <entry key="..\:/Users/abhis/AndroidStudioProjects/YiApp/app/src/main/res/font/alegreya_sc.xml" value="0.17592592592592593" />
         <entry key="..\:/Users/abhis/AndroidStudioProjects/YiApp/app/src/main/res/layout/activity_course.xml" value="0.17074275362318841" />
         <entry key="..\:/Users/abhis/AndroidStudioProjects/YiApp/app/src/main/res/layout/activity_login.xml" value="0.17074275362318841" />
         <entry key="..\:/Users/abhis/AndroidStudioProjects/YiApp/app/src/main/res/layout/activity_main.xml" value="0.17074275362318841" />
-        <entry key="..\:/Users/abhis/AndroidStudioProjects/YiApp/app/src/main/res/layout/activity_videos.xml" value="0.17074275362318841" />
+        <entry key="..\:/Users/abhis/AndroidStudioProjects/YiApp/app/src/main/res/layout/activity_videos.xml" value="0.25" />
         <entry key="..\:/Users/abhis/AndroidStudioProjects/YiApp/app/src/main/res/layout/app_bar_main.xml" value="0.17074275362318841" />
         <entry key="..\:/Users/abhis/AndroidStudioProjects/YiApp/app/src/main/res/layout/content_main.xml" value="0.17074275362318841" />
         <entry key="..\:/Users/abhis/AndroidStudioProjects/YiApp/app/src/main/res/layout/fragment_contact.xml" value="0.1" />
         <entry key="..\:/Users/abhis/AndroidStudioProjects/YiApp/app/src/main/res/layout/fragment_gallery.xml" value="0.17074275362318841" />
-        <entry key="..\:/Users/abhis/AndroidStudioProjects/YiApp/app/src/main/res/layout/fragment_home.xml" value="0.22" />
+        <entry key="..\:/Users/abhis/AndroidStudioProjects/YiApp/app/src/main/res/layout/fragment_home.xml" value="0.16" />
         <entry key="..\:/Users/abhis/AndroidStudioProjects/YiApp/app/src/main/res/layout/fragment_slideshow.xml" value="0.17074275362318841" />
         <entry key="..\:/Users/abhis/AndroidStudioProjects/YiApp/app/src/main/res/layout/nav_header_main.xml" value="0.17074275362318841" />
-        <entry key="..\:/Users/abhis/AndroidStudioProjects/YiApp/app/src/main/res/layout/single_course.xml" value="0.17074275362318841" />
+        <entry key="..\:/Users/abhis/AndroidStudioProjects/YiApp/app/src/main/res/layout/single_course.xml" value="0.25" />
         <entry key="..\:/Users/abhis/AndroidStudioProjects/YiApp/app/src/main/res/layout/single_vertical.xml" value="0.17074275362318841" />
         <entry key="..\:/Users/abhis/AndroidStudioProjects/YiApp/app/src/main/res/layout/single_vertical_card.xml" value="0.17074275362318841" />
         <entry key="..\:/Users/abhis/AndroidStudioProjects/YiApp/app/src/main/res/layout/single_video.xml" value="0.17074275362318841" />

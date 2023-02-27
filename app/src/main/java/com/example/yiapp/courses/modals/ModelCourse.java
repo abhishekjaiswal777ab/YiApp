@@ -6,7 +6,7 @@ public class ModelCourse {
     String _id;
     String name;
     String desc;
-    ArrayList<Object> unitArr=new ArrayList<>();
+    ArrayList<ModelAllUnits> unitArr=new ArrayList<>();
 
     public ModelCourse() {
     }
@@ -35,11 +35,11 @@ public class ModelCourse {
         this.desc = desc;
     }
 
-    public ArrayList<Object> getUnitArr() {
+    public ArrayList<ModelAllUnits> getUnitArr() {
         return unitArr;
     }
 
-    public void setUnitArr(ArrayList<Object> unitArr) {
+    public void setUnitArr(ArrayList<ModelAllUnits> unitArr) {
         this.unitArr = unitArr;
     }
 }

@@ -49,6 +49,9 @@ public class CourseAdapter extends RecyclerView.Adapter<CourseAdapter.myHolder> 
              @Override
              public void onClick(View view) {
                  Intent intent=new Intent(context, VideosActivity.class);
+                 intent.putExtra("course_name",model.getName());
+                 intent.putExtra("course_description",model.getDesc());
+                 intent.putExtra("listOfCourses",model.getUnitArr());
                  intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                  context.startActivity(intent);
              }
