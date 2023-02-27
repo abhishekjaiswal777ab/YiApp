@@ -43,7 +43,7 @@ public class CourseAdapter extends RecyclerView.Adapter<CourseAdapter.myHolder> 
          final ModelCourse model=list.get(position);
          holder.singleCourseBinding.courseName.setText(model.getName());
          holder.singleCourseBinding.courseDesc.setText(model.getDesc());
-         holder.singleCourseBinding.totalUnits.setText(Integer.toString(model.getUnitArr().size()));
+         holder.singleCourseBinding.totalUnits.setText(Integer.toString(model.getUnitArr().size())+" units"); //added unit text
 
          holder.singleCourseBinding.viewUnitButton.setOnClickListener(new View.OnClickListener() {
              @Override
