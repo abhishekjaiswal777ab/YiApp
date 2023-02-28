@@ -1,9 +1,17 @@
 package com.example.yiapp;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.TextView;
 
+import androidx.activity.result.ActivityResultCallback;
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.navigation.NavController;
@@ -19,6 +27,8 @@ public class MainActivity extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
     private ActivityMainBinding binding;
+    ImageView imageView;
+    ActivityResultLauncher<String>mPhoto;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,6 +48,38 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
+
+        Bundle extras = getIntent().getExtras();
+        View headerView =navigationView.getHeaderView(0);
+        imageView=headerView.findViewById(R.id.imageView);
+        Button gallery =headerView.findViewById(R.id.select_image);
+
+        mPhoto=registerForActivityResult(new ActivityResultContracts.GetContent(),
+                new ActivityResultCallback<Uri>() {
+                    @Override
+                    public void onActivityResult(Uri result) {
+                        imageView.setImageURI(result);
+                        //gallery.setVisibility(View.GONE);
+                    }
+                });
+        gallery.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mPhoto.launch("image/*");
+
+            }
+        });
+
+        //name and gmail
+        if (extras != null) {
+            String username = extras.getString("username");
+            String password = extras.getString("password");
+            TextView userName =headerView.findViewById(R.id.nav_header_name);
+            TextView email =headerView.findViewById(R.id.nav_header_email);
+            userName.setText(username);
+            email.setText(password+"@gmail.com");
+
+        }
     }
 
     @Override
