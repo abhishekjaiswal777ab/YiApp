@@ -54,6 +54,7 @@ public class CourseActivity extends AppCompatActivity {
 
         //shemmer effect called
         shimmerFrameLayout = findViewById(R.id.course_shimmer);
+        shimmerFrameLayout.startShimmer();
 
         SharedPreferences sp=getSharedPreferences("credentials",MODE_PRIVATE);
         String auth_token=sp.getString("token","");
