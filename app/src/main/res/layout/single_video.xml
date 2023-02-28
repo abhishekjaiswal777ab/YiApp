@@ -2,31 +2,46 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto">
+
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="77dp"
         tools:ignore="MissingConstraints">
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:cardCornerRadius="5dp"
-        android:elevation="4dp"
-        app:cardUseCompatPadding="true">
-        <LinearLayout
+
+        <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="horizontal">
-        <ImageView
-            android:id="@+id/video_image"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:srcCompat="@drawable/img" />
+            android:background="#EBECF0"
+            android:elevation="4dp"
+            app:cardCornerRadius="5dp"
+            app:cardUseCompatPadding="true">
 
-        <TextView
-            android:id="@+id/video_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-        </LinearLayout>
-    </androidx.cardview.widget.CardView>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#EBECF0"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/video_image"
+                    android:layout_width="74dp"
+                    android:layout_height="41dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginLeft="3dp"
+                    app:srcCompat="@drawable/video_24" />
+
+                <TextView
+                    android:id="@+id/video_text"
+                    android:layout_width="300dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:fontFamily="@font/rubik_medium"
+                    android:gravity="center_vertical"
+                    android:textColor="#020202"
+                    android:textSize="20sp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
     </androidx.appcompat.widget.LinearLayoutCompat>
 </layout>
