@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.home.HomeFragment"
-    android:background="@drawable/home_fragment_gradient">
+    >
 
         <com.denzcoskun.imageslider.ImageSlider
             android:id="@+id/image_slider"
