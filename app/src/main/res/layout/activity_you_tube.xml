@@ -34,27 +34,27 @@
 
 </LinearLayout>
 
-    <LinearLayout
+    <RelativeLayout
+
         android:id="@+id/Youtube_player_layout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="220dp"
         android:orientation="vertical"
         app:layout_constraintTop_toBottomOf="@id/Video_title_linearlayout"
         app:layout_constraintStart_toStartOf="@id/Video_title_linearlayout"
-        app:layout_constraintEnd_toEndOf="@id/Video_title_linearlayout">
+        app:layout_constraintEnd_toEndOf="@id/Video_title_linearlayout"
+        app:layout_constraintBottom_toTopOf="@id/linearlayout1"
+        android:layout_marginTop="15dp"
+        android:layout_marginHorizontal="15dp">
 
-        <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
-            android:id="@+id/YoutubePlayer"
-            android:layout_marginTop="10dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="15dp"
-            app:autoPlay="false"
-            app:videoId="HbTON0nb4DU"
-            android:clickable="true"/>
+       <com.google.android.youtube.player.YouTubePlayerView
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:id="@+id/YoutubePlayer"
+           android:layout_centerInParent="true"/>
 
 
-    </LinearLayout>
+    </RelativeLayout>
 
     <LinearLayout
         android:id="@+id/linearlayout1"

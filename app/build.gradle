@@ -74,5 +74,9 @@ dependencies {
 
     implementation 'com.pierfrancescosoffritti.androidyoutubeplayer:core:11.1.0'
 
+    //YouTube Player Google
+
+    implementation files('libs/YouTubeAndroidPlayerApi.jar')
+
 
 }

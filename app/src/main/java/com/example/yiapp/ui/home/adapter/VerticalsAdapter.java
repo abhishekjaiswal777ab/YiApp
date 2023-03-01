@@ -53,19 +53,11 @@ public class VerticalsAdapter extends RecyclerView.Adapter<VerticalsAdapter.myHo
         //edit Start
 
         //Animation Start
-
-        Animation animation = AnimationUtils.loadAnimation(holder.itemView.getContext(), android.R.anim.slide_in_left);
-        holder.itemView.startAnimation(animation);
-
-        //Animation End
-
-        //Backup Animation if swipeRefresh is removed
-
-//        holder.singleVerticalBinding.verticalCardView.setTranslationX(800);
 //
-//        holder.singleVerticalBinding.verticalCardView.setAlpha(v);
-//
-//        holder.singleVerticalBinding.verticalCardView.animate().translationX(0).alpha(1).setDuration(800).setStartDelay(300).start();
+//        Animation animation = AnimationUtils.loadAnimation(holder.itemView.getContext(), android.R.anim.slide_in_left);
+//        holder.itemView.startAnimation(animation);
+
+
 
         holder.singleVerticalBinding.DropdownDesc.setOnClickListener(new View.OnClickListener() {
             @Override
