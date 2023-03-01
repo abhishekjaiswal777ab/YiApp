@@ -9,6 +9,9 @@ public class ModelVertical {
     private ArrayList<String> courseIds;
     private String imgSrc;
 
+    //isVisible is for controlling visibility of description text
+    public boolean isVisible;
+
     public ModelVertical() {
     }
 

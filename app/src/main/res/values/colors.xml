@@ -17,4 +17,5 @@
 
     <color name="shimmer">#BFBDBD</color>
 
+    <color name="desc_gray_font">#696969</color>
 </resources>

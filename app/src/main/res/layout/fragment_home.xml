@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.home.HomeFragment">
+    tools:context=".ui.home.HomeFragment"
+    android:background="@drawable/home_fragment_gradient">
 
         <com.denzcoskun.imageslider.ImageSlider
             android:id="@+id/image_slider"
@@ -16,7 +17,13 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintTop_toTopOf="parent"
+
+
+            android:layout_marginLeft="10dp"
+            android:elevation="30dp"
+            android:outlineSpotShadowColor="@color/black"
+            android:outlineAmbientShadowColor="@color/black">
         </com.denzcoskun.imageslider.ImageSlider>
 
     <TextView
@@ -29,10 +36,12 @@
         android:fontFamily="@font/adamina_regular"
         android:text="@string/courses_title"
         android:textColor="@color/black"
-        android:textSize="30dp"
+        android:textSize="35dp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/image_slider" />
+        app:layout_constraintTop_toBottomOf="@+id/image_slider"
+        app:layout_constraintBottom_toTopOf="@id/swiperefreshlayout"
+        android:layout_marginLeft="12dp"/>
 
     <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
         android:id="@+id/swiperefreshlayout"

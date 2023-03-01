@@ -40,7 +40,8 @@
                     android:fontFamily="@font/rubik_medium"
                     android:gravity="center_vertical"
                     android:textColor="#020202"
-                    android:textSize="20sp" />
+                    android:textSize="20sp"
+                    android:clickable="true"/>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
     </androidx.appcompat.widget.LinearLayoutCompat>

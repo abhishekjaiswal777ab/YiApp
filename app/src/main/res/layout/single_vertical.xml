@@ -3,19 +3,34 @@
         xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <androidx.appcompat.widget.LinearLayoutCompat
+
+        android:id="@+id/verticallayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
     <androidx.cardview.widget.CardView
+        android:id="@+id/vertical_cardView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:cardCornerRadius="5dp"
-        android:elevation="4dp"
-        app:cardUseCompatPadding="true">
+        app:cardCornerRadius="15dp"
+        android:elevation="20dp"
+
+        app:cardUseCompatPadding="true"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:outlineAmbientShadowColor="@color/black"
+        android:outlineSpotShadowColor="@color/black"
+        android:shadowDy="@integer/material_motion_duration_long_2"
+        android:shadowDx="@integer/material_motion_duration_long_2">
 
         <RelativeLayout
+            android:id="@+id/Vertical_Card_Layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="16dp">
+            android:padding="8dp"
+            android:background="@drawable/ecl_card_view_shape_curve">
 
             <ImageView
                 android:layout_width="80dp"
@@ -26,26 +41,42 @@
             </ImageView>
             <TextView
                 android:id="@+id/t1"
-                android:layout_width="match_parent"
+                android:layout_width="240dp"
                 android:layout_height="wrap_content"
                 android:text="text"
                 android:textStyle="bold"
                 android:textSize="25dp"
                 android:textColor="@color/black"
                 android:layout_toRightOf="@+id/img1"
+                android:foregroundGravity="center"
                 android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
+                android:layout_marginTop="20dp"
                 />
+
+            <ImageView
+                android:clickable="true"
+                android:id="@+id/DropdownDesc"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_toRightOf="@id/t1"
+                android:background="@drawable/baseline_keyboard_arrow_down_24"
+                android:layout_toEndOf="@id/t1"
+                android:layout_marginTop="18dp"
+                />
+
             <TextView
                 android:id="@+id/t2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="desc"
                 android:textSize="20dp"
-                android:textStyle="bold"
+
                 android:textColor="@color/grey_font"
                 android:layout_toRightOf="@+id/img1"
                 android:layout_below="@+id/t1"
                 android:layout_marginLeft="10dp"
+                android:visibility="gone"
                 />
 
         </RelativeLayout>
