@@ -69,4 +69,12 @@ dependencies {
 
     //circular image
     implementation 'de.hdodenhof:circleimageview:3.1.0'
+
+
+
+    //YouTube Player Google
+
+    implementation files('libs/YouTubeAndroidPlayerApi.jar')
+
+
 }
