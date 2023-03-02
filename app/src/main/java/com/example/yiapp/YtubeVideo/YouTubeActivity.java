@@ -3,6 +3,7 @@ package com.example.yiapp.YtubeVideo;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Dialog;
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
@@ -12,10 +13,15 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.yiapp.R;
+import com.example.yiapp.courses.modals.ModelQuestions;
+import com.example.yiapp.quiz.QuizActivity;
+import com.example.yiapp.quiz.QuizResult;
 import com.google.android.youtube.player.YouTubeBaseActivity;
 import com.google.android.youtube.player.YouTubeInitializationResult;
 import com.google.android.youtube.player.YouTubePlayer;
 import com.google.android.youtube.player.YouTubePlayerView;
+
+import java.util.ArrayList;
 
 public class YouTubeActivity extends YouTubeBaseActivity {
 
@@ -28,12 +34,15 @@ public class YouTubeActivity extends YouTubeBaseActivity {
 
     String VideoSrc;
     String VideoCode;
+    Button quizButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_you_tube);
 
+
         youTubePlayerView = findViewById(R.id.YoutubePlayer);
+        quizButton=findViewById(R.id.Quiz_Button);
 
 
         YouTubePlayer.OnInitializedListener listener = new YouTubePlayer.OnInitializedListener() {
@@ -77,6 +86,18 @@ public class YouTubeActivity extends YouTubeBaseActivity {
             @Override
             public void onClick(View v) {
                 dialog.show();
+            }
+        });
+
+
+        // quiz
+        quizButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(getApplicationContext(), QuizActivity.class);
+                intent.putExtra("Quiz", (ArrayList< ModelQuestions >)(getIntent().getSerializableExtra("Questions")));
+                startActivity(intent);
+
             }
         });
     }
