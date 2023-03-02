@@ -5,6 +5,8 @@ import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -19,6 +21,7 @@ import java.util.List;
 public class VerticalsAdapter extends RecyclerView.Adapter<VerticalsAdapter.myHolder>
 {
 
+    float v = 0;
     List<ModelVertical> modelVerticals;
     Context context;
     public VerticalsAdapter(List<ModelVertical> modelVerticals, Context context) {
@@ -47,7 +50,39 @@ public class VerticalsAdapter extends RecyclerView.Adapter<VerticalsAdapter.myHo
 
            Picasso.get().load(model.getImgSrc()).into(holder.singleVerticalBinding.img1);
 
-           holder.singleVerticalBinding.t1.setOnClickListener(new View.OnClickListener() {
+        //edit Start
+
+        //Animation Start
+//
+//        Animation animation = AnimationUtils.loadAnimation(holder.itemView.getContext(), android.R.anim.slide_in_left);
+//        holder.itemView.startAnimation(animation);
+
+
+
+        holder.singleVerticalBinding.DropdownDesc.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(modelVerticals.get(position).isVisible)
+                {
+                    holder.singleVerticalBinding.t2.setVisibility(View.GONE);
+                    modelVerticals.get(position).isVisible = false;
+                    holder.singleVerticalBinding.DropdownDesc.setRotationY(180);
+                    holder.singleVerticalBinding.DropdownDesc.setVisibility(View.VISIBLE);
+                }
+                else
+                {
+                    holder.singleVerticalBinding.t2.setVisibility(View.VISIBLE);
+                    modelVerticals.get(position).isVisible = true;
+                    holder.singleVerticalBinding.DropdownDesc.setRotationY(180);
+                    holder.singleVerticalBinding.DropdownDesc.setVisibility(View.VISIBLE);
+                }
+            }
+        });
+
+        //edit End
+
+
+        holder.singleVerticalBinding.t1.setOnClickListener(new View.OnClickListener() {
                @Override
                public void onClick(View view) {
                    Intent intent=new Intent(context, CourseActivity.class);
