@@ -20,4 +20,12 @@
     <color name="shimmer">#BFBDBD</color>
 
     <color name="desc_gray_font">#696969</color>
+
+    <color name="dark">#07274e</color>
+    <color name="header_dark">#2d74ca</color>
+    <color name="wave_dark">#2d74ca</color>
+    <color name="card">#edecf0</color>
+    <color name="text_colour">#E4DCDC</color>
+    <color name="card_dark">#DBDADD</color>
+    <color name="HomeScreen_Dark">#101753</color>
 </resources>

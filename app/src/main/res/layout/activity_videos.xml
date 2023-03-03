@@ -4,14 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    style="@style/SCREEN"
     tools:context=".courses.VideosActivity">
 
 
     <View
         android:id="@+id/View"
-        android:layout_width="413dp"
-        android:layout_height="104dp"
-        android:background="#07274e"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        style="@style/Header"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -21,74 +22,85 @@
     </View>
 
 
+    <View
+        android:id="@+id/view"
+        style="@style/Wave"
+        android:layout_width="match_parent"
+
+
+        android:layout_height="64dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/View" />
+
+    <TextView
+
+        android:id="@+id/course_heading"
+        style="@style/TEXT"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="5dp"
+        android:autoSizeMaxTextSize="22sp"
+        android:autoSizeMinTextSize="18sp"
+        android:autoSizeTextType="uniform"
+        android:fontFamily="@font/source_sans_pro_bold"
+
+
+        android:gravity="center_vertical"
+
+        android:text="Text Title"
+        android:textAllCaps="true"
+        android:textSize="22dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/View"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+
+        android:id="@+id/course_description"
+        style="@style/TEXT"
+        android:layout_width="match_parent"
+        android:layout_height="94dp"
+        android:layout_below="@id/course_heading"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="6dp"
+
+        android:autoSizeMaxTextSize="16sp"
+        android:autoSizeMinTextSize="8sp"
+        android:autoSizeTextType="uniform"
+        android:fontFamily="@font/rubik_medium"
+        android:gravity="top|left"
+
+        android:text="shwgewgdgewdfgegchjhcgegcjeghe"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@+id/View"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.434"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/course_heading"
+        app:layout_constraintVertical_bias="0.25" />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recview_video"
-        android:layout_width="369dp"
-        android:layout_height="565dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="170dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.478"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/view"
         app:layout_constraintVertical_bias="0.0" />
-
-    <View
-        android:id="@+id/view"
-        android:layout_width="415dp"
-        android:layout_height="51dp"
-
-
-        android:background="@drawable/wave"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/View" />
-
-    <RelativeLayout
-        android:layout_width="410dp"
-        android:layout_height="152dp"
-        app:layout_constraintBottom_toBottomOf="@+id/view"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
-
-        <TextView
-
-            android:id="@+id/course_heading"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="17dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginEnd="17dp"
-
-
-            android:fontFamily="@font/source_sans_pro_bold"
-            android:gravity="center_vertical"
-            android:text="Text Title"
-            android:textAllCaps="true"
-            android:textColor="#E4E1E1"
-            android:textSize="22dp"
-            android:textStyle="bold"
-            tools:ignore="MissingConstraints" />
-
-        <TextView
-
-            android:id="@+id/course_description"
-            android:layout_width="379dp"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/course_heading"
-            android:layout_marginStart="18dp"
-            android:layout_marginTop="4dp"
-            android:layout_marginEnd="8dp"
-            android:fontFamily="@font/rubik_medium"
-            android:gravity="top|left"
-            android:text="Text Description"
-            android:textColor="#E4DCDC"
-            android:textSize="15sp"
-            />
-    </RelativeLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

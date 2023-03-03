@@ -5,18 +5,22 @@
 
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
-        android:layout_height="77dp"
+        android:layout_height="wrap_content"
         tools:ignore="MissingConstraints">
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#EBECF0"
-            android:elevation="4dp"
-            app:cardCornerRadius="5dp"
-            app:cardUseCompatPadding="true">
 
-            <LinearLayout
+            style="@style/Card"
+            android:elevation="25dp"
+            app:cardCornerRadius="5dp"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="#EBECF0"
@@ -27,21 +31,35 @@
                     android:layout_width="74dp"
                     android:layout_height="41dp"
                     android:layout_gravity="center_vertical"
-                    android:layout_marginStart="3dp"
-                    android:layout_marginLeft="3dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
                     app:srcCompat="@drawable/video_24" />
+
 
                 <TextView
                     android:id="@+id/video_text"
-                    android:layout_width="300dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginStart="5dp"
-                    android:layout_marginLeft="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="78dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="7dp"
+
+
                     android:fontFamily="@font/rubik_medium"
+
                     android:gravity="center_vertical"
+                    android:text="ashdghdgfgdfvdhsgfhfuhfgfgfgdefgdsdfgggggggggggggggggggcffdfdffdddfdtryttyttyuhjhbgfgfgvcb vcgfgfvbvbvgfghnvnbvgfhghbvhvghvbvbvadarsh adarsh adarsh adarsh adarsh adsarsh adarsh adarsh"
                     android:textColor="#020202"
-                    android:textSize="20sp" />
-            </LinearLayout>
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toEndOf="@+id/video_image"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="1.0" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.cardview.widget.CardView>
     </androidx.appcompat.widget.LinearLayoutCompat>
 </layout>

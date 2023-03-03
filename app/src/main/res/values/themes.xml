@@ -27,4 +27,33 @@
     <style name="Theme.YiApp.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="Theme.YiApp.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+
+    //light theme for app
+    <style name = "SCREEN">
+        <item name="android:background">@color/white</item>
+    </style>
+    <style name ="Header">
+        <item name="android:background">@color/dark</item>
+    </style>
+    <style name="Wave">
+        <item name="android:background">@drawable/wave</item>
+        <item name="color">@color/header_dark</item>
+    </style>
+
+    //text colour if light mode is on
+    <style name="TEXT">
+        <item name="android:textColor">@color/text_colour</item>
+    </style>
+
+    //button colour if light mode is on
+    <style name="BUTTON">
+        <item name="android:background">@color/dark</item>
+        <item name="android:textColor">@color/text_colour</item>
+    </style>
+
+    //card colour for light
+    <style name="Card">
+        <item name="android:background">@color/card</item>
+    </style>
 </resources>
