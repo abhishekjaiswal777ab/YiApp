@@ -9,36 +9,15 @@
     android:orientation="vertical"
     tools:context=".courses.CourseActivity">
 
-
-    <View
-        android:id="@+id/View"
-        style="@style/Header"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
         android:layout_width="match_parent"
-
-        android:layout_height="120dp"
-
-
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_height="wrap_content"
+        android:background="@color/dark"
+        tools:ignore="MissingConstraints">
 
 
-    </View>
 
-
-    <View
-        android:id="@+id/view"
-        style="@style/Wave"
-        android:layout_width="match_parent"
-        android:layout_height="64dp"
-
-
-        android:layout_below="@+id/vertical_name"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/View" />
 
     <TextView
         android:id="@+id/vertical_name"
@@ -74,7 +53,7 @@
         style="@style/TEXT"
         android:layout_width="match_parent"
 
-        android:layout_height="96dp"
+        android:layout_height="wrap_content"
         android:layout_below="@id/vertical_name"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
@@ -83,36 +62,36 @@
         android:layout_marginRight="10dp"
         android:layout_marginBottom="45dp"
         android:autoSizeMaxTextSize="16sp"
-        android:autoSizeMinTextSize="8sp"
+        android:autoSizeMinTextSize="10sp"
         android:autoSizeTextType="uniform"
         android:fontFamily="@font/rubik_medium"
         android:gravity="top|left"
 
         android:text="Lorem Ipsum is simply dummy text of the printing and typesetti."
-        app:layout_constraintBottom_toBottomOf="@+id/view"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/vertical_name" />
 
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
     <com.facebook.shimmer.ShimmerFrameLayout
         android:id="@+id/course_shimmer"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        android:layout_marginBottom="10dp"
         android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/swipeforcourses">
+        app:layout_constraintTop_toBottomOf="@+id/view">
 
         <LinearLayout
 
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="170dp"
+            android:layout_marginTop="10dp"
 
 
             android:orientation="vertical">
@@ -129,34 +108,31 @@
 
             </include>
 
-            <include layout="@layout/shimmer_layout">
-
-            </include>
-
-            <include layout="@layout/shimmer_layout">
-
-            </include>
 
         </LinearLayout>
 
     </com.facebook.shimmer.ShimmerFrameLayout>
 
+    <View
+        android:id="@+id/view"
+        style="@style/Wave"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+
     <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
         android:id="@+id/swipeforcourses"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-
-        android:layout_below="@+id/vertical_desc"
-        android:layout_marginTop="170dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="357dp"
+        android:layout_height="579dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        android:layout_marginBottom="10dp"
-        app:layout_constraintHorizontal_bias="0.481"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/view">
 
@@ -164,14 +140,15 @@
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recview_course"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="5dp"
-            android:layout_marginTop="240dp"
-            android:layout_marginRight="5dp"
-            android:visibility="gone"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:visibility="visible"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/vertical_desc">
+            app:layout_constraintTop_toBottomOf="@+id/view">
 
 
         </androidx.recyclerview.widget.RecyclerView>
