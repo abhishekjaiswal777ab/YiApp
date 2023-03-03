@@ -33,37 +33,36 @@
             android:background="@drawable/ecl_card_view_shape_curve">
 
             <ImageView
+                android:id="@+id/img1"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
-                android:src="@mipmap/ic_launcher"
-                android:id="@+id/img1">
+                android:src="@mipmap/ic_launcher">
 
             </ImageView>
+
             <TextView
                 android:id="@+id/t1"
                 android:layout_width="240dp"
                 android:layout_height="wrap_content"
-                android:text="text"
-                android:textStyle="bold"
-                android:textSize="25dp"
-                android:textColor="@color/black"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
                 android:layout_toRightOf="@+id/img1"
                 android:foregroundGravity="center"
-                android:layout_marginLeft="10dp"
                 android:gravity="center_vertical"
-                android:layout_marginTop="20dp"
-                />
+                android:text="text"
+                android:textColor="@color/black"
+                android:textSize="25dp"
+                android:textStyle="bold" />
 
             <ImageView
-                android:clickable="true"
                 android:id="@+id/DropdownDesc"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
+                android:layout_marginTop="18dp"
+                android:layout_toEndOf="@id/t1"
                 android:layout_toRightOf="@id/t1"
                 android:background="@drawable/baseline_keyboard_arrow_down_24"
-                android:layout_toEndOf="@id/t1"
-                android:layout_marginTop="18dp"
-                />
+                android:clickable="true" />
 
             <TextView
                 android:id="@+id/t2"
