@@ -15,12 +15,11 @@
         <androidx.cardview.widget.CardView
             android:id="@+id/card_course"
             android:layout_width="match_parent"
-            android:layout_height="190dp"
+            android:layout_height="wrap_content"
             android:elevation="25dp"
             app:cardCornerRadius="3dp"
             android:background="#EBECF0"
             app:cardUseCompatPadding="true"
-
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
@@ -34,11 +33,13 @@
 
                 <TextView
                     android:id="@+id/course_name"
-                    android:layout_width="340dp"
-                    android:layout_height="41dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_gravity="right"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="22dp"
 
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="22dp"
                     android:fontFamily="@font/rubik_medium"
                     android:paddingStart="10dp"
                     android:text="helllo"
@@ -55,12 +56,14 @@
                 <TextView
 
                     android:id="@+id/course_desc"
-                    android:layout_width="336dp"
-                    android:layout_height="69dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="22dp"
+                    android:layout_marginEnd="22dp"
                     android:fontFamily="@font/rubik_medium"
+
                     android:gravity="left"
                     android:paddingStart="8dp"
-
                     android:text="i am very good"
                     android:textColor="#000000"
                     android:textSize="16sp"
@@ -73,6 +76,7 @@
                     android:id="@+id/total_units"
                     android:layout_width="79dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
                     android:layout_marginBottom="12dp"
                     android:gravity="center"
                     android:text="unit"
@@ -85,17 +89,16 @@
                     android:id="@+id/view_unit_button"
                     android:layout_width="145dp"
                     android:layout_height="49dp"
+                    android:layout_marginTop="22dp"
                     android:layout_marginBottom="8dp"
                     android:background="@drawable/oval"
-
                     android:gravity="center|center_vertical"
-
                     android:text="View Units"
-
                     android:textColor="#F1EDED"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent">
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/course_desc">
 
                 </androidx.appcompat.widget.AppCompatButton>
             </androidx.constraintlayout.widget.ConstraintLayout>

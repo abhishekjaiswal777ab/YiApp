@@ -16,9 +16,7 @@
         android:textColor="@color/black"
         android:textStyle="bold"
         android:textAlignment="center"
-        android:textSize="20sp"
-        >
-
+        android:textSize="20sp">
     </TextView>
 
     <LinearLayout
