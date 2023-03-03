@@ -4,19 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
     android:orientation="vertical"
     tools:context=".courses.CourseActivity">
 
 
     <View
         android:id="@+id/View"
-        android:layout_width="413dp"
+        android:layout_width="match_parent"
         android:layout_height="104dp"
         android:background="#07274e"
-
-
-
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -53,22 +49,13 @@
             android:textColor="#E4E1E1"
             android:textSize="20dp"
             android:textStyle="bold" />
-
-        <View
-            android:id="@+id/view"
-            android:layout_width="match_parent"
-            android:layout_height="66dp"
-            android:layout_below="@+id/vertical_name"
-
-
-            android:layout_marginTop="42dp"
-            android:background="@drawable/wave" />
-
         <TextView
             android:id="@+id/vertical_desc"
             android:layout_width="381dp"
             android:layout_height="60dp"
-
+            android:autoSizeMaxTextSize="14dp"
+            android:autoSizeMinTextSize="12sp"
+            android:autoSizeTextType="uniform"
             android:layout_below="@id/vertical_name"
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
@@ -82,6 +69,17 @@
             android:textColor="#E4DCDC"
             android:textSize="15sp" />
 
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="66dp"
+            android:layout_below="@+id/vertical_name"
+            android:layout_alignTop="@+id/swipeforcourses"
+            android:layout_marginTop="-54dp"
+            android:background="@drawable/wave" />
+
+
+
         <com.facebook.shimmer.ShimmerFrameLayout
             android:id="@+id/course_shimmer"
             android:layout_width="match_parent"
@@ -89,13 +87,10 @@
             android:visibility="visible">
 
             <LinearLayout
-
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="150dp"
-
                 android:orientation="vertical">
-
                 <include layout="@layout/shimmer_layout">
 
                 </include>
@@ -103,15 +98,10 @@
                 <include layout="@layout/shimmer_layout">
 
                 </include>
-
                 <include layout="@layout/shimmer_layout">
-
                 </include>
-
                 <include layout="@layout/shimmer_layout">
-
                 </include>
-
             </LinearLayout>
 
         </com.facebook.shimmer.ShimmerFrameLayout>
@@ -130,7 +120,6 @@
             android:layout_marginEnd="9dp"
             android:layout_marginBottom="16dp">
 
-
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recview_course"
                 android:layout_width="match_parent"
@@ -142,14 +131,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/vertical_desc">
-
-
             </androidx.recyclerview.widget.RecyclerView>
-
-
         </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
-
     </RelativeLayout>
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>

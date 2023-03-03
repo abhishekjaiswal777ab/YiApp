@@ -47,6 +47,7 @@ public class VideosAdapter extends RecyclerView.Adapter<VideosAdapter.myHolder> 
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(context, YouTubeActivity.class);
+                intent.putExtra("Questions",model.getQuiz());
 
                 intent.putExtra("VideoSource" , model.getVideo().getVdoSrc());
                 intent.putExtra("Description" , model.getVideo().getDesc());
